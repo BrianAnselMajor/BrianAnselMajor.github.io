@@ -1,2325 +1,761 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Brian Ansel Major | Official Artist Website</title>
 
-<meta name="description" content="Official website of Brian Ansel Major — independent songwriter and recording artist. Listen, watch, read the story, and connect.">
-<meta name="theme-color" content="#070707">
+<meta name="description" content="Official website of Brian Ansel Major — independent songwriter and recording artist. Listen to the music, watch videos, and connect.">
+
+<meta name="theme-color" content="#080808">
 
 <meta property="og:title" content="Brian Ansel Major | Official Artist Website">
-<meta property="og:description" content="Independent songwriter and recording artist. Listen, watch, and connect.">
+<meta property="og:description" content="Independent songwriter and recording artist.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://briananselmajor.github.io/">
 <meta property="og:image" content="https://briananselmajor.github.io/brian-ansel-major.jpg">
 
 <meta name="twitter:card" content="summary_large_image">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<meta name="twitter:title" content="Brian Ansel Major | Official Artist Website">
+<meta name="twitter:description" content="Independent songwriter and recording artist.">
+<meta name="twitter:image" content="https://briananselmajor.github.io/brian-ansel-major.jpg">
 
 <style>
 
-:root{
---bg:#070707;
---soft:#0d0d0d;
---panel:#121212;
---text:#f5f2eb;
---muted:#aaa59d;
---line:#292826;
---gold:#d8c09a;
---gold2:#f0dfbd;
---max:1180px;
---radius:18px
-}
+/* =========================
+   RESET
+========================= */
 
-*{
-box-sizing:border-box
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-scroll-behavior:smooth
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-margin:0;
-background:
-radial-gradient(circle at 85% 10%,rgba(216,192,154,.1),transparent 24rem),
-var(--bg);
-color:var(--text);
-font-family:Inter,Arial,sans-serif;
-line-height:1.65;
-overflow-x:hidden
+body {
+    background: #080808;
+    color: #f5f2eb;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-a{
-color:inherit;
-text-decoration:none
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-img{
-max-width:100%;
-display:block
+img {
+    max-width: 100%;
+    display: block;
 }
 
-.container{
-width:min(var(--max),88%);
-margin:auto
+button {
+    font-family: inherit;
 }
 
-.eyebrow{
-color:var(--gold);
-text-transform:uppercase;
-letter-spacing:.34em;
-font-size:.72rem;
-font-weight:700
-}
 
-/* NAVIGATION */
+/* =========================
+   VARIABLES
+========================= */
 
-nav{
-position:sticky;
-top:0;
-z-index:10;
-background:rgba(7,7,7,.9);
-backdrop-filter:blur(16px);
-border-bottom:1px solid rgba(255,255,255,.08)
+:root {
+    --black: #080808;
+    --black2: #0d0d0d;
+    --panel: #121212;
+    --panel2: #171717;
+    --gold: #d8c29d;
+    --gold2: #bda47a;
+    --white: #f5f2eb;
+    --muted: #aaa59d;
+    --muted2: #77736d;
+    --line: #292824;
 }
 
-.nav-inner{
-min-height:74px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:24px
-}
 
-.logo{
-font-size:.88rem;
-font-weight:800;
-letter-spacing:.17em;
-white-space:nowrap
-}
+/* =========================
+   SCROLLBAR
+========================= */
 
-.nav-links{
-display:flex;
-gap:26px;
-font-size:.83rem;
-color:#d2cec6
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-.nav-links a:hover{
-color:var(--gold2)
+::-webkit-scrollbar-track {
+    background: #080808;
 }
-
-/* HERO */
 
-.hero{
-min-height:calc(100vh - 74px);
-display:flex;
-align-items:center;
-padding:72px 0 92px
+::-webkit-scrollbar-thumb {
+    background: #383630;
 }
 
-.hero-grid{
-display:grid;
-grid-template-columns:1.02fr .98fr;
-align-items:center;
-gap:70px
+::-webkit-scrollbar-thumb:hover {
+    background: #5a554b;
 }
 
-.hero-copy{
-position:relative;
-z-index:2
-}
 
-h1{
-font-size:clamp(4rem,8.8vw,8.7rem);
-line-height:.84;
-letter-spacing:-.075em;
-margin:20px 0 28px
-}
+/* =========================
+   NAVIGATION
+========================= */
 
-.tagline{
-max-width:650px;
-color:#b9b4ac;
-font-size:clamp(1.08rem,1.7vw,1.3rem);
-margin:0
-}
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
-.hero-actions{
-display:flex;
-flex-wrap:wrap;
-gap:12px;
-margin-top:34px
-}
+    width: 100%;
 
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-min-height:48px;
-padding:0 20px;
-border:1px solid var(--line);
-border-radius:999px;
-background:#141414;
-font-weight:700;
-font-size:.86rem;
-transition:.2s ease
-}
+    background: rgba(8,8,8,0.94);
 
-.btn:hover{
-border-color:#5a544a;
-transform:translateY(-2px)
-}
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 
-.btn.primary{
-background:var(--gold);
-border-color:var(--gold);
-color:#111
+    border-bottom: 1px solid var(--line);
 }
 
-.hero-note{
-display:flex;
-align-items:center;
-gap:12px;
-margin-top:32px;
-color:#817c75;
-font-size:.78rem;
-letter-spacing:.08em;
-text-transform:uppercase
-}
+.nav-inner {
+    max-width: 1200px;
+    margin: auto;
 
-.hero-note span{
-width:38px;
-height:1px;
-background:var(--gold)
-}
+    padding: 18px 6%;
 
-/* PHOTO */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-.portrait-wrap{
-justify-self:end;
-width:min(100%,500px)
+    gap: 20px;
 }
 
-.portrait-frame{
-position:relative;
-background:#fff;
-border:1px solid #37332d;
-border-radius:22px;
-overflow:hidden;
-box-shadow:0 24px 70px rgba(0,0,0,.42)
-}
+.logo {
+    font-size: 15px;
+    font-weight: 800;
 
-.portrait-frame img{
-width:100%;
-aspect-ratio:3/4;
-object-fit:cover;
-object-position:center 42%
-}
+    letter-spacing: 4px;
 
-.portrait-label{
-position:absolute;
-left:18px;
-bottom:18px;
-background:rgba(7,7,7,.84);
-border:1px solid rgba(255,255,255,.13);
-padding:9px 13px;
-border-radius:999px;
-color:#e6e0d6;
-font-size:.68rem;
-font-weight:700;
-letter-spacing:.16em;
-text-transform:uppercase
+    white-space: nowrap;
 }
 
-/* SECTIONS */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 26px;
 
-section{
-padding:105px 0;
-border-top:1px solid rgba(255,255,255,.07)
+    font-size: 14px;
 }
 
-.section-head{
-display:flex;
-justify-content:space-between;
-align-items:end;
-gap:30px;
-margin-bottom:42px
-}
+.nav-links a {
+    color: #d0ccc4;
 
-h2{
-margin:8px 0 0;
-font-size:clamp(2.4rem,5vw,4.5rem);
-line-height:.98;
-letter-spacing:-.055em
+    transition:
+        color .2s ease,
+        transform .2s ease;
 }
 
-.section-intro{
-color:var(--muted);
-max-width:590px;
-font-size:1.05rem;
-margin:0
+.nav-links a:hover {
+    color: var(--gold);
+    transform: translateY(-1px);
 }
-
-/* MUSIC */
 
-.music-grid{
-display:grid;
-grid-template-columns:1.15fr .85fr;
-gap:22px
-}
 
-.feature-card,
-.release-card,
-.story-card{
-background:linear-gradient(145deg,#151515,#0e0e0e);
-border:1px solid var(--line);
-border-radius:var(--radius)
-}
+/* =========================
+   HERO
+========================= */
 
-.feature-card{
-padding:14px
-}
+.hero {
+    min-height: 92vh;
 
-.spotify-frame{
-width:100%;
-height:352px;
-border:0;
-border-radius:12px
-}
+    position: relative;
 
-.release-card{
-padding:30px;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-min-height:352px
-}
+    display: flex;
+    align-items: center;
 
-.release-card h3{
-margin:10px 0;
-font-size:1.55rem
-}
+    overflow: hidden;
 
-.release-card p{
-color:var(--muted)
+    background:
+        radial-gradient(
+            circle at 75% 30%,
+            rgba(216,194,157,.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(216,194,157,.07),
+            transparent 30%
+        ),
+        #080808;
 }
 
-/* VIDEO */
-
-.video-shell{
-position:relative;
-aspect-ratio:16/9;
-background:#000;
-border-radius:var(--radius);
-overflow:hidden;
-border:1px solid var(--line);
-box-shadow:0 24px 70px rgba(0,0,0,.42)
-}
+.hero::before {
+    content: "";
 
-.video-shell iframe{
-width:100%;
-height:100%;
-border:0
-}
+    position: absolute;
 
-/* STORY */
+    inset: 0;
 
-.story-grid{
-display:grid;
-grid-template-columns:.78fr 1.22fr;
-gap:22px
-}
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8,8,8,1) 0%,
+            rgba(8,8,8,.90) 45%,
+            rgba(8,8,8,.38) 100%
+        );
 
-.story-card{
-padding:34px
+    pointer-events: none;
 }
 
-.story-card.large{
-padding:42px
-}
+.hero-inner {
+    width: 100%;
+    max-width: 1200px;
 
-.story-card h3{
-font-size:1.65rem;
-margin:0 0 18px
-}
+    margin: auto;
 
-.story-card p{
-color:#b2ada5;
-margin:0 0 18px;
-font-size:1.02rem
-}
+    padding: 80px 6%;
 
-.story-card p:last-child{
-margin-bottom:0
-}
+    position: relative;
+    z-index: 2;
 
-.quote{
-font-family:"Playfair Display",Georgia,serif;
-font-size:clamp(1.8rem,3.2vw,3rem);
-line-height:1.15
-}
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
 
-/* CONNECT */
+    align-items: center;
 
-.connect-box{
-padding:52px;
-border:1px solid var(--line);
-border-radius:var(--radius);
-background:
-radial-gradient(circle at 90% 10%,rgba(216,192,154,.13),transparent 25rem),
-linear-gradient(145deg,#141414,#0d0d0d)
+    gap: 70px;
 }
 
-.connect-box h2{
-max-width:760px
+.hero-copy {
+    max-width: 680px;
 }
 
-.connect-box p{
-max-width:650px;
-color:var(--muted);
-font-size:1.08rem;
-margin:22px 0 30px
-}
+.eyebrow {
+    color: var(--gold);
 
-.socials{
-display:flex;
-flex-wrap:wrap;
-gap:11px
-}
+    font-size: 13px;
+    font-weight: 700;
 
-/* FOOTER */
+    text-transform: uppercase;
 
-footer{
-padding:42px 0 55px;
-color:#79756f;
-font-size:.78rem
-}
+    letter-spacing: 5px;
 
-.footer-inner{
-display:flex;
-justify-content:space-between;
-gap:20px;
-border-top:1px solid var(--line);
-padding-top:24px
+    margin-bottom: 22px;
 }
-
-/* MOBILE */
 
-@media(max-width:850px){
+.hero h1 {
+    font-size: clamp(58px, 9vw, 108px);
 
-.nav-inner{
-min-height:66px
-}
+    line-height: .88;
 
-.nav-links{
-gap:14px;
-font-size:.74rem
-}
+    letter-spacing: -5px;
 
-.hero{
-padding:55px 0 75px;
-min-height:auto
+    margin-bottom: 30px;
 }
 
-.hero-grid,
-.music-grid,
-.story-grid{
-grid-template-columns:1fr
+.hero h1 span {
+    display: block;
 }
 
-.hero-grid{
-gap:38px
-}
+.hero-description {
+    max-width: 650px;
 
-.portrait-wrap{
-justify-self:center;
-order:-1;
-width:min(100%,560px)
-}
+    color: #b5b1aa;
 
-h1{
-font-size:clamp(4rem,16vw,6.4rem)
-}
+    font-size: clamp(18px, 2vw, 22px);
 
-.section-head{
-display:block
-}
+    line-height: 1.6;
 
-.section-intro{
-margin-top:18px
+    margin-bottom: 35px;
 }
 
-.connect-box{
-padding:34px 26px
-}
+.hero-buttons {
+    display: flex;
 
-.footer-inner{
-display:block
-}
+    flex-wrap: wrap;
 
-.footer-inner div+div{
-margin-top:8px
+    gap: 12px;
 }
 
-}
+.button {
+    display: inline-flex;
 
-@media(max-width:520px){
+    align-items: center;
+    justify-content: center;
 
-.container{
-width:92%
-}
+    min-height: 48px;
 
-.logo{
-font-size:.73rem;
-letter-spacing:.12em
-}
+    padding: 13px 22px;
 
-.nav-links{
-gap:10px
-}
+    border: 1px solid #383630;
 
-.hero-actions .btn{
-width:100%
-}
+    border-radius: 4px;
 
-section{
-padding:78px 0
-}
+    font-size: 14px;
+    font-weight: 700;
 
-.spotify-frame{
-height:352px
-}
+    letter-spacing: .4px;
 
-.story-card,
-.story-card.large{
-padding:27px
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        border-color .2s ease;
 }
 
-.connect-box{
-padding:30px 22px
-}
+.button:hover {
+    transform: translateY(-2px);
 
-.socials .btn{
-width:100%
+    border-color: var(--gold);
 }
 
-}
+.button-primary {
+    background: var(--gold);
 
-</style>
+    color: #111;
 
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"MusicGroup",
-"name":"Brian Ansel Major",
-"url":"https://briananselmajor.github.io/",
-"sameAs":[
-"https://open.spotify.com/artist/2P1NVw72CWnujKtKR3ACbX",
-"https://youtu.be/wL5PXIMUkrM",
-"https://www.facebook.com/share/1AzRDeyDSk/",
-"https://vm.tiktok.com/ZT9SKqNpMtRKV-GgS2p/"
-]
+    border-color: var(--gold);
 }
-</script>
-
-</head>
-
-<body>
-
-<nav>
-<div class="container nav-inner">
-
-<a class="logo" href="#home">
-BRIAN ANSEL MAJOR
-</a>
-
-<div class="nav-links">
-<a href="#music">Music</a>
-<a href="#video">Video</a>
-<a href="#story">Story</a>
-<a href="#connect">Connect</a>
-</div>
-
-</div>
-</nav>
-
-<main id="home">
-
-<!-- HERO -->
-
-<header class="hero">
-
-<div class="container hero-grid">
-
-<div class="hero-copy">
-
-<div class="eyebrow">
-Official Artist Website
-</div>
-
-<h1>
-Brian<br>
-Ansel Major
-</h1>
-
-<p class="tagline">
-Independent songwriter and recording artist creating music from the places where real life, love, struggle and resilience meet.
-</p>
-
-<div class="hero-actions">
-
-<a class="btn primary"
-href="https://open.spotify.com/artist/2P1NVw72CWnujKtKR3ACbX"
-target="_blank"
-rel="noopener">
-Listen on Spotify
-</a>
-
-<a class="btn"
-href="#video">
-Watch the Video
-</a>
-
-</div>
-
-<div class="hero-note">
-<span></span>
-Music with something real behind it.
-</div>
-
-</div>
-
-<div class="portrait-wrap">
-
-<div class="portrait-frame">
-
-<img
-src="brian-ansel-major.jpg"
-alt="Brian Ansel Major"
-fetchpriority="high">
-
-<div class="portrait-label">
-Brian Ansel Major
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</header>
-
-
-<!-- MUSIC -->
-
-<section id="music">
-
-<div class="container">
-
-<div class="section-head">
-
-<div>
-
-<div class="eyebrow">
-Music
-</div>
-
-<h2>
-Press play.
-</h2>
-
-</div>
-
-<p class="section-intro">
-Explore the artist catalog on Spotify and stay connected as new music and videos arrive.
-</p>
-
-</div>
-
-
-<div class="music-grid">
-
-<div class="feature-card">
-
-<iframe
-class="spotify-frame"
-src="https://open.spotify.com/embed/artist/2P1NVw72CWnujKtKR3ACbX?utm_source=generator&theme=0"
-title="Brian Ansel Major on Spotify"
-loading="lazy"
-allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-allowfullscreen>
-</iframe>
-
-</div>
-
-
-<div class="release-card">
-
-<div>
-
-<div class="eyebrow">
-Official Catalog
-</div>
-
-<h3>
-Brian Ansel Major on Spotify
-</h3>
-
-<p>
-Listen to the music, explore the artist page, and follow along for future releases.
-</p>
-
-</div>
-
-<a
-class="btn primary"
-href="https://open.spotify.com/artist/2P1NVw72CWnujKtKR3ACbX"
-target="_blank"
-rel="noopener">
-Open Spotify
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- VIDEO -->
-
-<section id="video">
-
-<div class="container">
-
-<div class="section-head">
-
-<div>
-
-<div class="eyebrow">
-Video
-</div>
-
-<h2>
-Watch.
-</h2>
-
-</div>
 
-<p class="section-intro">
-Official video content from Brian Ansel Major.
-</p>
+.button-primary:hover {
+    background: #ead8b9;
 
-</div>
-
-
-<div class="video-shell">
-
-<iframe
-src="https://www.youtube.com/embed/wL5PXIMUkrM"
-title="Brian Ansel Major — Official YouTube Video"
-loading="lazy"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
-
-</div>
-
-
-<div class="hero-actions" style="margin-top:20px">
-
-<a
-class="btn"
-href="https://youtu.be/wL5PXIMUkrM"
-target="_blank"
-rel="noopener">
-Open on YouTube
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- STORY -->
-
-<section id="story">
-
-<div class="container">
-
-<div class="section-head">
-
-<div>
-
-<div class="eyebrow">
-The Story
-</div>
-
-<h2>
-Something real behind it.
-</h2>
-
-</div>
-
-</div>
-
-
-<div class="story-grid">
-
-<article class="story-card">
-
-<div class="quote">
-“Every song is another piece of the story.”
-</div>
-
-</article>
-
-
-<article class="story-card large">
-
-<h3>
-Authenticity first.
-</h3>
-
-<p>
-Brian Ansel Major is an independent artist building his catalog one song at a time. His work reflects personal experience, emotion and the reality of life outside the spotlight.
-</p>
-
-<p>
-Rather than chasing a manufactured image, Brian’s music is rooted in authenticity — songs written to connect with people who have lived through love, loss, setbacks, change and the determination to keep moving forward.
-</p>
-
-</article>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONNECT -->
-
-<section id="connect">
-
-<div class="container">
-
-<div class="connect-box">
-
-<div class="eyebrow">
-Connect
-</div>
-
-<h2>
-Stay close to what’s next.
-</h2>
+    border-color: #ead8b9;
+}
 
-<p>
-Follow Brian Ansel Major across his platforms for music, videos, updates and new releases.
-</p>
+.button-dark {
+    background: #151515;
+}
 
 
-<div class="socials">
+/* =========================
+   HERO IMAGE
+========================= */
 
-<a
-class="btn primary"
-href="https://open.spotify.com/artist/2P1NVw72CWnujKtKR3ACbX"
-target="_blank"
-rel="noopener">
-Spotify
-</a>
+.hero-photo-wrap {
+    position: relative;
 
-<a
-class="btn"
-href="https://youtu.be/wL5PXIMUkrM"
-target="_blank"
-rel="noopener">
-YouTube
-</a>
+    display: flex;
 
-<a
-class="btn"
-href="https://vm.tiktok.com/ZT9SKqNpMtRKV-GgS2p/"
-target="_blank"
-rel="noopener">
-TikTok
-</a>
+    justify-content: center;
+}
 
-<a
-class="btn"
-href="https://www.facebook.com/share/1AzRDeyDSk/"
-target="_blank"
-rel="noopener">
-Facebook
-</a>
+.hero-photo {
+    width: 100%;
 
-</div>
+    max-width: 540px;
 
-</div>
+    aspect-ratio: 4 / 5;
 
-</div>
+    object-fit: cover;
 
-</section>
+    object-position: center top;
 
-</main>
+    border: 1px solid #302f2b;
 
+    border-radius: 4px;
 
-<footer>
+    box-shadow:
+        0 35px 80px rgba(0,0,0,.55);
+}
 
-<div class="container footer-inner">
+.photo-label {
+    position: absolute;
 
-<div>
-© 2026 Brian Ansel Major. All rights reserved.
-</div>
+    left: -20px;
+    bottom: 25px;
 
-<div>
-Official Artist Website
-</div>
+    padding: 12px 16px;
 
-</div>
+    background: rgba(8,8,8,.92);
 
-</footer>
+    border: 1px solid #36342f;
 
-</body>
-</html>  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.6;
-}
+    color: var(--gold);
 
-a{
-  color:inherit;
-  text-decoration:none;
-}
+    font-size: 11px;
+    font-weight: 700;
 
-img{
-  max-width:100%;
-  display:block;
-}
+    letter-spacing: 3px;
 
-nav{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(8,8,8,.94);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--line);
-  padding:17px 6%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+    text-transform: uppercase;
 }
 
-.logo{
-  font-size:14px;
-  font-weight:800;
-  letter-spacing:2px;
-}
 
-.navlinks{
-  display:flex;
-  gap:22px;
-  font-size:14px;
-  color:#ddd;
-}
+/* =========================
+   SECTIONS
+========================= */
 
-.navlinks a:hover{
-  color:var(--gold);
+section {
+    border-top: 1px solid var(--line);
 }
 
-.hero{
-  min-height:92vh;
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  align-items:center;
-  gap:50px;
-  padding:70px 7%;
-  background:
-    radial-gradient(circle at 15% 30%,rgba(216,194,157,.12),transparent 32%),
-    linear-gradient(135deg,#080808,#11100e);
+.section {
+    padding: 110px 6%;
 }
 
-.hero-text{
-  max-width:720px;
-}
+.container {
+    max-width: 1100px;
 
-.kicker{
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:5px;
-  font-size:12px;
-  font-weight:700;
+    margin: auto;
 }
 
-h1{
-  font-size:clamp(55px,8vw,105px);
-  line-height:.9;
-  letter-spacing:-4px;
-  margin:18px 0 25px;
+.section-header {
+    margin-bottom: 45px;
 }
 
-.hero-title{
-  font-size:clamp(18px,2.5vw,27px);
-  color:#ddd;
-  max-width:620px;
-  margin:0;
-}
+.section-label {
+    color: var(--gold);
 
-.hero-buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:32px;
-}
+    font-size: 12px;
 
-.btn{
-  display:inline-block;
-  padding:14px 22px;
-  border:1px solid var(--line);
-  border-radius:5px;
-  background:#151515;
-  font-weight:700;
-  transition:.2s ease;
-}
+    font-weight: 700;
 
-.btn:hover{
-  transform:translateY(-2px);
-  border-color:var(--gold);
-}
+    text-transform: uppercase;
 
-.btn.primary{
-  background:var(--gold);
-  color:#0b0b0b;
-  border-color:var(--gold);
-}
+    letter-spacing: 4px;
 
-.hero-photo{
-  position:relative;
+    margin-bottom: 12px;
 }
 
-.hero-photo img{
-  width:100%;
-  max-height:650px;
-  object-fit:cover;
-  object-position:center top;
-  border-radius:8px;
-  border:1px solid var(--line);
-  box-shadow:0 30px 80px rgba(0,0,0,.55);
-}
+.section-title {
+    font-size: clamp(38px, 6vw, 65px);
 
-.photo-caption{
-  margin-top:12px;
-  color:#777;
-  font-size:12px;
-  text-transform:uppercase;
-  letter-spacing:2px;
-}
+    line-height: 1;
 
-section{
-  padding:100px 7%;
-  border-bottom:1px solid var(--line);
-}
+    letter-spacing: -2px;
 
-.container{
-  max-width:1120px;
-  margin:auto;
+    margin-bottom: 18px;
 }
 
-.section-head{
-  max-width:800px;
-}
+.section-intro {
+    max-width: 760px;
 
-h2{
-  font-size:clamp(38px,5vw,64px);
-  line-height:1;
-  letter-spacing:-2px;
-  margin:15px 0 25px;
-}
+    color: var(--muted);
 
-.lead{
-  color:var(--muted);
-  font-size:20px;
-  max-width:800px;
-}
+    font-size: 19px;
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:22px;
-  margin-top:45px;
+    line-height: 1.7;
 }
 
-.card{
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:9px;
-  padding:32px;
-}
 
-.card h3{
-  font-size:26px;
-  margin:0 0 10px;
-}
+/* =========================
+   STATEMENT
+========================= */
 
-.card p{
-  color:var(--muted);
+.statement {
+    background: #0d0d0d;
 }
 
-.music-section{
-  background:#0c0c0c;
-}
+.statement-inner {
+    max-width: 950px;
 
-.spotify-box{
-  margin-top:35px;
-  border-radius:12px;
-  overflow:hidden;
-  border:1px solid var(--line);
-}
+    margin: auto;
 
-.spotify-box iframe{
-  display:block;
-  width:100%;
-  height:352px;
-  border:0;
+    text-align: center;
 }
 
-.video-box{
-  margin-top:35px;
-  position:relative;
-  width:100%;
-  aspect-ratio:16/9;
-  border-radius:10px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  background:#000;
-}
+.statement-text {
+    font-size: clamp(28px, 5vw, 54px);
 
-.video-box iframe{
-  width:100%;
-  height:100%;
-  border:0;
-}
+    line-height: 1.15;
 
-.story-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  margin-top:45px;
-  align-items:start;
+    letter-spacing: -1px;
 }
 
-.story-grid p{
-  color:var(--muted);
-  font-size:18px;
+.statement-text span {
+    color: var(--gold);
 }
 
-.quote{
-  border-left:3px solid var(--gold);
-  padding:10px 0 10px 25px;
-  font-size:25px;
-  line-height:1.35;
-  color:#eee;
-}
 
-.connect{
-  text-align:center;
-}
+/* =========================
+   STORY
+========================= */
 
-.connect .lead{
-  margin-left:auto;
-  margin-right:auto;
-}
+.story-grid {
+    display: grid;
 
-.socials{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:12px;
-  margin-top:35px;
-}
+    grid-template-columns: 1fr 1fr;
 
-.socials .btn{
-  min-width:120px;
+    gap: 55px;
 }
 
-.press-box{
-  margin-top:40px;
-  padding:35px;
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:9px;
-}
+.story-block {
+    color: var(--muted);
 
-.press-box p{
-  color:var(--muted);
-}
+    font-size: 18px;
 
-footer{
-  padding:45px 7%;
-  color:#777;
-  text-align:center;
-  font-size:13px;
+    line-height: 1.85;
 }
 
-.footer-name{
-  color:#aaa;
-  font-weight:700;
-  letter-spacing:2px;
-  margin-bottom:8px;
+.story-block p {
+    margin-bottom: 22px;
 }
-
-@media(max-width:800px){
-
-  nav{
-    padding:15px 5%;
-  }
-
-  .logo{
-    font-size:12px;
-  }
-
-  .navlinks{
-    gap:12px;
-    font-size:12px;
-  }
-
-  .hero{
-    min-height:auto;
-    grid-template-columns:1fr;
-    padding:60px 6% 75px;
-    gap:45px;
-  }
-
-  h1{
-    font-size:clamp(52px,15vw,80px);
-    letter-spacing:-3px;
-  }
 
-  .hero-title{
-    font-size:18px;
-  }
+.story-highlight {
+    border-left: 2px solid var(--gold);
 
-  .hero-photo{
-    order:-1;
-  }
+    padding-left: 28px;
 
-  .hero-photo img{
-    max-height:560px;
-  }
+    color: #ded9d0;
 
-  section{
-    padding:70px 6%;
-  }
+    font-size: 22px;
 
-  h2{
-    font-size:42px;
-  }
-
-  .lead{
-    font-size:18px;
-  }
-
-  .cards{
-    grid-template-columns:1fr;
-  }
-
-  .story-grid{
-    grid-template-columns:1fr;
-    gap:20px;
-  }
-
-  .quote{
-    font-size:21px;
-  }
-
-  .spotify-box iframe{
-    height:352px;
-  }
+    line-height: 1.6;
 }
-
-@media(max-width:480px){
-
-  .navlinks{
-    gap:9px;
-  }
-
-  .navlinks a:nth-child(3){
-    display:none;
-  }
 
-  .hero{
-    padding-top:45px;
-  }
 
-  h1{
-    font-size:52px;
-  }
+/* =========================
+   MUSIC
+========================= */
 
-  .hero-buttons{
-    flex-direction:column;
-  }
-
-  .hero-buttons .btn{
-    text-align:center;
-  }
-
-  .card{
-    padding:25px;
-  }
-
-  .socials{
-    flex-direction:column;
-  }
-
-  .socials .btn{
-    width:100%;
-  }
+.music-section {
+    background:
+        linear-gradient(
+            180deg,
+            #080808 0%,
+            #0d0d0d 100%
+        );
 }
-</style>
-</head>
-
-<body>
-
-<nav>
-  <div class="logo">BRIAN ANSEL MAJOR</div>
-
-  <div class="navlinks">
-    <a href="#story">Story</a>
-    <a href="#music">Music</a>
-    <a href="#video">Video</a>
-    <a href="#connect">Connect</a>
-  </div>
-</nav>
-
-
-<header class="hero">
-
-  <div class="hero-text">
-
-    <div class="kicker">Official Artist Website</div>
-
-    <h1>Brian<br>Ansel Major</h1>
-
-    <p class="hero-title">
-      Independent songwriter and recording artist creating music from the places where real life, love, struggle and resilience meet.
-    </p>
-
-    <div class="hero-buttons">
-
-      <a
-        class="btn primary"
-        href="https://open.spotify.com/artist/2P1NVw72CWnujKtKR3ACbX"
-        target="_blank"
-        rel="noopener">
-        Listen on Spotify
-      </a>
-
-      <a
-        class="btn"
-        href="https://youtu.be/wL5PXIMUkrM"
-        target="_blank"
-        rel="noopener">
-        Watch on YouTube
-      </a>
-
-    </div>
-
-  </div>
-
-
-  <div class="hero-photo">
-
-    <img
-      src="brian-ansel-major.jpg"
-      alt="Brian Ansel Major">
-
-    <div class="photo-caption">
-      Brian Ansel Major — Official Artist
-    </div>
-
-  </div>
-
-</header>
-
-
-<section id="music" class="music-section">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="kicker">Music</div>
-
-      <h2>Listen to the music.</h2>
 
-      <p class="lead">
-        Explore the music of Brian Ansel Major on Spotify and stay connected for new releases and recordings.
-      </p>
+.music-grid {
+    display: grid;
 
-    </div>
+    grid-template-columns: 1fr 1fr;
 
-
-    <div class="spotify-box">
-
-      <iframe
-        src="https://open.spotify.com/embed/artist/2P1NVw72CWnujKtKR3ACbX?utm_source=generator"
-        loading="lazy"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="video">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="kicker">Video</div>
-
-      <h2>Watch Brian Ansel Major.</h2>
-
-      <p class="lead">
-        Watch music and visual content on YouTube.
-      </p>
-
-    </div>
-
-
-    <div class="video-box">
-
-      <iframe
-        src="https://www.youtube.com/embed/wL5PXIMUkrM"
-        title="Brian Ansel Major on YouTube"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="story">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="kicker">The Story</div>
-
-      <h2>Music with something real behind it.</h2>
-
-    </div>
-
-
-    <div class="story-grid">
-
-      <div>
-
-        <p>
-          Brian Ansel Major is an independent artist building his catalog one song at a time. His work reflects personal experience, emotion and the reality of life outside the spotlight.
-        </p>
-
-        <p>
-          His music is rooted in authenticity — songs written to connect with people who have lived through love, loss, setbacks, change and the determination to keep moving forward.
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <div class="quote">
-          Every song is another piece of the story.
-        </div>
-
-        <p>
-          The goal is simple: make music that feels honest, connects with people and gives listeners something they can carry with them.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section>
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="kicker">About the Artist</div>
-
-      <h2>Authenticity first.</h2>
-
-      <p class="lead">
-        Rather than chasing a manufactured image, Brian's music is focused on genuine emotion, personal experience and the stories that come from real life.
-      </p>
-
-    </div>
-
-
-    <div class="cards">
-
-      <div class="card">
-
-        <h3>Real Life</h3>
-
-        <p>
-          Music shaped by experiences, emotions, challenges and the moments that leave a lasting impression.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <h3>Keep Moving</h3>
-
-        <p>
-          Songs about resilience, change and continuing forward when life doesn't always go according to plan.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="connect" class="connect">
-
-  <div class="container">
-
-    <div class="kicker">Connect</div>
-
-    <h2>Stay connected.</h2>
-
-    <p class="lead">
-      Follow Brian Ansel Major for music, videos, updates and what's next.
-    </p>
-
-
-    <div class="socials">
-
-      <a
-        class="btn primary"
-        href="https://open.spotify.com/artist/2P1NVw72CWnujKtKR3ACbX"
-        target="_blank"
-        rel="noopener">
-        Spotify
-      </a>
+    gap: 22px;
+}
 
-      <a
-        class="btn"
-        href="https://youtu.be/wL5PXIMUkrM"
-        target="_blank"
-        rel="noopener">
-        YouTube
-      </a>
+.music-card {
+    background: var(--panel);
 
-      <a
-        class="btn"
-        href="https://vm.tiktok.com/ZT9SKqNpMtRKV-GgS2p/"
-        target="_blank"
-        rel="noopener">
-        TikTok
-      </a>
+    border: 1px solid var(--line);
 
-      <a
-        class="btn"
-        href="https://www.facebook.com/share/1AzRDeyDSk/"
-        target="_blank"
-        rel="noopener">
-        Facebook
-      </a>
+    padding: 34px;
 
-    </div>
+    min-height: 260px;
 
+    display: flex;
 
-    <div class="press-box">
+    flex-direction: column;
 
-      <div class="kicker">For Press & Opportunities</div>
+    justify-content: space-between;
 
-      <p>
-        This website serves as the official online home of Brian Ansel Major, providing music, video, artist information and social links in one place.
-      </p>
+    transition:
+        transform .25s ease,
+        border-color .25s ease;
+}
 
-    </div>
+.music-card:hover {
+    transform: translateY(-4px);
 
-  </div>
+    border-color: #4a463d;
+}
 
-</section>
+.music-icon {
+    width: 48px;
+    height: 48px;
 
+    border: 1px solid #393731;
 
-<footer>
+    display: flex;
 
-  <div class="footer-name">
-    BRIAN ANSEL MAJOR
-  </div>
+    align-items: center;
+    justify-content: center;
 
-  © 2026 Brian Ansel Major. All rights reserved.
+    color: var(--gold);
 
-</footer>
+    font-size: 18px;
 
-</body>
-</html>  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.6;
+    margin-bottom: 25px;
 }
 
-a{
-  color:inherit;
-  text-decoration:none;
-}
+.music-card h3 {
+    font-size: 27px;
 
-nav{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(8,8,8,.94);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--line);
-  padding:18px 6%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+    margin-bottom: 10px;
 }
 
-.logo{
-  font-weight:800;
-  letter-spacing:2px;
-  font-size:15px;
-}
+.music-card p {
+    color: var(--muted);
 
-nav .links{
-  display:flex;
-  gap:22px;
-  font-size:14px;
+    margin-bottom: 28px;
 }
 
-nav a:hover{
-  color:var(--accent);
-}
 
-.hero{
-  min-height:90vh;
-  display:flex;
-  align-items:center;
-  padding:90px 7%;
-  background:
-    radial-gradient(circle at 80% 25%,#3a3024 0,#211b15 18%,transparent 45%),
-    linear-gradient(135deg,#090909 0%,#11100f 55%,#090909 100%);
-  position:relative;
-  overflow:hidden;
-}
+/* =========================
+   VIDEO
+========================= */
 
-.hero:after{
-  content:"";
-  position:absolute;
-  width:500px;
-  height:500px;
-  right:-220px;
-  bottom:-250px;
-  border:1px solid rgba(217,196,161,.12);
-  border-radius:50%;
-  box-shadow:
-    0 0 0 80px rgba(217,196,161,.025),
-    0 0 0 160px rgba(217,196,161,.02);
+.video-section {
+    background: #0a0a0a;
 }
 
-.hero-inner{
-  max-width:900px;
-  position:relative;
-  z-index:2;
-}
+.video-wrap {
+    width: 100%;
 
-.kicker{
-  color:var(--accent);
-  text-transform:uppercase;
-  letter-spacing:4px;
-  font-size:12px;
-  font-weight:700;
-}
+    max-width: 1000px;
 
-h1{
-  font-size:clamp(52px,11vw,115px);
-  line-height:.9;
-  letter-spacing:-4px;
-  margin:22px 0;
-}
+    margin: 40px auto 0;
 
-.hero h1 span{
-  display:block;
-}
+    aspect-ratio: 16 / 9;
 
-.hero p{
-  font-size:clamp(18px,3vw,23px);
-  color:var(--muted);
-  max-width:700px;
-  margin:0;
-}
+    border: 1px solid var(--line);
 
-.buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:34px;
+    background: #000;
 }
 
-.btn{
-  display:inline-block;
-  padding:14px 22px;
-  border:1px solid var(--line);
-  border-radius:5px;
-  background:var(--panel2);
-  font-weight:700;
-  transition:.2s;
-}
+.video-wrap iframe {
+    width: 100%;
+    height: 100%;
 
-.btn:hover{
-  transform:translateY(-2px);
-  border-color:var(--accent);
+    border: 0;
 }
 
-.btn.primary{
-  background:var(--accent);
-  color:#111;
-  border-color:var(--accent);
-}
 
-section{
-  padding:95px 7%;
-  border-bottom:1px solid var(--line);
-}
+/* =========================
+   CONNECT
+========================= */
 
-.container{
-  max-width:1100px;
-  margin:auto;
+.connect-section {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(216,194,157,.10),
+            transparent 45%
+        ),
+        #0d0d0d;
 }
 
-.section-head{
-  max-width:800px;
-  margin-bottom:35px;
-}
+.social-grid {
+    display: grid;
 
-h2{
-  font-size:clamp(34px,5vw,52px);
-  line-height:1;
-  margin:12px 0 20px;
-  letter-spacing:-1px;
-}
+    grid-template-columns:
+        repeat(4, 1fr);
 
-.lead{
-  font-size:20px;
-  color:var(--muted);
-  max-width:800px;
-}
+    gap: 12px;
 
-.story-grid{
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:25px;
-  margin-top:35px;
+    margin-top: 40px;
 }
 
-.card{
-  background:var(--panel);
-  border:1px solid var(--line);
-  padding:30px;
-  border-radius:10px;
-}
+.social-card {
+    min-height: 130px;
 
-.card h3{
-  margin-top:0;
-  font-size:25px;
-}
+    padding: 22px;
 
-.card p{
-  color:var(--muted);
-}
+    background: #111;
 
-.quote{
-  border-left:3px solid var(--accent);
-  padding-left:25px;
-  font-size:24px;
-  line-height:1.4;
-}
+    border: 1px solid var(--line);
 
-.music-box{
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:12px;
-  padding:20px;
-  margin-top:30px;
-}
+    display: flex;
 
-.spotify{
-  width:100%;
-  min-height:352px;
-  border:0;
-  border-radius:10px;
-}
+    flex-direction: column;
 
-.video{
-  margin-top:35px;
-  position:relative;
-  width:100%;
-  padding-bottom:56.25%;
-  height:0;
-  overflow:hidden;
-  border-radius:12px;
-  border:1px solid var(--line);
-  background:#000;
-}
+    justify-content: space-between;
 
-.video iframe{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  border:0;
+    transition:
+        transform .2s ease,
+        border-color .2s ease;
 }
 
-.socials{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:30px;
-}
+.social-card:hover {
+    transform: translateY(-3px);
 
-.social{
-  min-width:130px;
-  text-align:center;
+    border-color: var(--gold);
 }
 
-.epk{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  margin-top:30px;
-}
+.social-name {
+    font-size: 17px;
 
-.epk .card{
-  text-align:center;
+    font-weight: 700;
 }
 
-.epk-number{
-  color:var(--accent);
-  font-size:30px;
-  font-weight:800;
-}
+.social-action {
+    color: var(--gold);
 
-.cta{
-  text-align:center;
-  padding:100px 7%;
-  background:
-    radial-gradient(circle at center,#2a241c 0,#11100e 38%,#080808 75%);
-}
+    font-size: 12px;
 
-.cta h2{
-  max-width:750px;
-  margin:10px auto 20px;
-}
+    text-transform: uppercase;
 
-.cta p{
-  color:var(--muted);
-  max-width:650px;
-  margin:0 auto;
-  font-size:18px;
+    letter-spacing: 2px;
 }
 
-.cta .buttons{
-  justify-content:center;
-}
 
-footer{
-  padding:35px 7%;
-  color:var(--muted);
-  text-align:center;
-  font-size:13px;
-}
+/* =========================
+   EPK / PRESS
+========================= */
 
-.footer-name{
-  color:var(--text);
-  font-weight:700;
-  letter-spacing:1px;
-  margin-bottom:8px;
+.press-section {
+    background: #080808;
 }
 
-@media(max-width:750px){
+.press-box {
+    border: 1px solid var(--line);
 
-  nav{
-    padding:15px 5%;
-    align-items:flex-start;
-    gap:10px;
-  }
+    background:
+        linear-gradient(
+            135deg,
+            #151515,
+            #0d0d0d
+        );
 
-  .logo{
-    font-size:12px;
-    letter-spacing:1px;
-  }
+    padding: 45px;
 
-  nav .links{
-    gap:9px;
-    font-size:11px;
-    flex-wrap:wrap;
-    justify-content:flex-end;
-  }
+    display: grid;
 
-  .hero{
-    min-height:82vh;
-    padding:70px 7%;
-  }
+    grid-template-columns: 1.2fr .8fr;
 
-  h1{
-    font-size:clamp(48px,15vw,78px);
-    letter-spacing:-3px;
-  }
+    gap: 45px;
 
-  section{
-    padding:70px 7%;
-  }
-
-  .story-grid{
-    grid-template-columns:1fr;
-  }
-
-  .epk{
-    grid-template-columns:1fr;
-  }
-
-  .card{
-    padding:24px;
-  }
-
-  .quote{
-    font-size:20px;
-  }
-
-  .spotify{
-    min-height:352px;
-  }
+    align-items: center;
 }
-</style>
-</head>
-
-<body>
-
-<nav>
-  <div class="logo">BRIAN ANSEL MAJOR</div>
-
-  <div class="links">
-    <a href="#story">Story</a>
-    <a href="#music">Music</a>
-    <a href="#video">Video</a>
-    <a href="#connect">Connect</a>
-  </div>
-</nav>
-
-
-<header class="hero">
-
-  <div class="hero-inner">
-
-    <div class="kicker">Official Artist Website</div>
-
-    <h1>
-      Brian
-      <span>Ansel Major</span>
-    </h1>
-
-    <p>
-      Independent songwriter and recording artist creating music
-      from the places where real life, love, struggle and resilience meet.
-    </p>
-
-    <div class="buttons">
 
-      <a class="btn primary"
-         href="https://open.spotify.com/artist/2P1NVw72CWnujKtKR3ACbX"
-         target="_blank"
-         rel="noopener">
-        Listen on Spotify
-      </a>
+.press-box h3 {
+    font-size: 34px;
 
-      <a class="btn"
-         href="https://youtu.be/wL5PXIMUkrM"
-         target="_blank"
-         rel="noopener">
-        Watch on YouTube
-      </a>
-
-    </div>
-
-  </div>
-
-</header>
-
-
-<section id="story">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="kicker">The Story</div>
-
-      <h2>Music with something real behind it.</h2>
-
-      <p class="lead">
-        Brian Ansel Major is an independent artist building his catalog
-        one song at a time. His work reflects personal experience,
-        emotion and the reality of life outside the spotlight.
-      </p>
-
-    </div>
-
-
-    <div class="story-grid">
-
-      <div class="card">
-
-        <h3>Authenticity first.</h3>
-
-        <p>
-          Rather than chasing a manufactured image, Brian's music is
-          rooted in authenticity — songs written to connect with people
-          who have lived through love, loss, setbacks, change and the
-          determination to keep moving forward.
-        </p>
-
-        <p>
-          Every song is another piece of the story.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="quote">
-          Real life creates the stories.
-          Music gives those stories a voice.
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="music">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="kicker">Music</div>
-
-      <h2>Listen to Brian Ansel Major.</h2>
-
-      <p class="lead">
-        Explore the music and artist catalog on Spotify.
-      </p>
-
-    </div>
-
-
-    <div class="music-box">
-
-      <iframe
-        class="spotify"
-        src="https://open.spotify.com/embed/artist/2P1NVw72CWnujKtKR3ACbX?utm_source=generator"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
-      </iframe>
-
-    </div>
-
-
-    <div class="buttons">
-
-      <a class="btn primary"
-         href="https://open.spotify.com/artist/2P1NVw72CWnujKtKR3ACbX"
-         target="_blank"
-         rel="noopener">
-        Open Spotify
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="video">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="kicker">Video</div>
-
-      <h2>Watch the music.</h2>
-
-      <p class="lead">
-        Music, videos and visual content from Brian Ansel Major.
-      </p>
-
-    </div>
-
-
-    <div class="video">
-
-      <iframe
-        src="https://www.youtube.com/embed/wL5PXIMUkrM"
-        title="Brian Ansel Major on YouTube"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        loading="lazy">
-      </iframe>
-
-    </div>
-
-
-    <div class="buttons">
-
-      <a class="btn primary"
-         href="https://youtu.be/wL5PXIMUkrM"
-         target="_blank"
-         rel="noopener">
-        Open YouTube
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="connect">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="kicker">Connect</div>
-
-      <h2>Follow the journey.</h2>
-
-      <p class="lead">
-        Stay connected for new music, videos and what's next.
-      </p>
-
-    </div>
-
-
-    <div class="socials">
-
-      <a class="btn social"
-         href="https://vm.tiktok.com/ZT9SKqNpMtRKV-GgS2p/"
-         target="_blank"
-         rel="noopener">
-        TikTok
-      </a>
-
-      <a class="btn social"
-         href="https://www.facebook.com/share/1AzRDeyDSk/"
-         target="_blank"
-         rel="noopener">
-        Facebook
-      </a>
-
-      <a class="btn social"
-         href="https://open.spotify.com/artist/2P1NVw72CWnujKtKR3ACbX"
-         target="_blank"
-         rel="noopener">
-        Spotify
-      </a>
-
-      <a class="btn social"
-         href="https://youtu.be/wL5PXIMUkrM"
-         target="_blank"
-         rel="noopener">
-        YouTube
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section>
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="kicker">Artist Profile</div>
-
-      <h2>Brian Ansel Major</h2>
-
-      <p class="lead">
-        Independent songwriter and recording artist.
-      </p>
-
-    </div>
-
-
-    <div class="epk">
-
-      <div class="card">
-
-        <div class="epk-number">01</div>
-
-        <h3>Music</h3>
-
-        <p>
-          Listen to the official artist catalog on Spotify.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="epk-number">02</div>
-
-        <h3>Video</h3>
-
-        <p>
-          Watch official and featured video content on YouTube.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="epk-number">03</div>
-
-        <h3>Social</h3>
-
-        <p>
-          Follow Brian across his social platforms.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section class="cta">
-
-  <div class="container">
-
-    <div class="kicker">Stay Connected</div>
-
-    <h2>There is more music ahead.</h2>
+    margin-bottom: 14px;
+}
 
-    <p>
-      Follow Brian Ansel Major and stay connected to the journey.
-    </p>
+.press-box p {
+    color: var(--muted);
 
-    <div class="buttons">
+    font-size: 17px;
 
-      <a class="btn primary"
-         href="https://open.spotify.com/artist/2P1NVw72CWnujKtKR3ACbX"
-         target="_blank"
-         rel="noopener">
-        Listen Now
-      </a>
+    line-height: 1.7;
+}
 
-      <a class="btn"
-         href="https://vm.tiktok.com/ZT9SKqNpMtRKV-GgS2p/"
-         target="_blank"
-         rel="noopener">
-        Follow on TikTok
-      </a>
+.press-list {
+    list-style: none;
 
-    </div>
+    color: #c7c2ba;
 
-  </div>
+    font-size: 14px;
 
-</section>
+    line-height: 2.1;
+}
 
+.press-list li::before {
+    content: "— ";
 
-<footer>
+    color: var(--gold);
+}
 
-  <div class="footer-name">
-    BRIAN ANSEL MAJOR
-  </div>
 
-  © 2026 Brian Ansel Major. All rights reserved.
+/* =========================
+   FOOTER
+========================= */
 
-</footer>
+footer {
+    border-top: 1px solid var(--line);
 
+    padding: 50px 6%;
 
-</body>
-</html>nav{align-items:flex-start;gap:12px}nav div:last-child{gap:10px;font-size:12px;flex-wrap:wrap;justify-content:flex-end}
-.hero{min-height:75vh;padding-top:60px}
-.grid{grid-template-columns:1fr}
-section{padding:60px 7%}
-h2{font-size:32px}
+    background: #060606;
 }
-</style>
-</head>
-<body>
-
-<nav>
-<div class="logo">BRIAN ANSEL MAJOR</div>
-<div>
-<a href="#story">Story</a>
-<a href="#music">Music</a>
-<a href="#connect">Connect</a>
-</div>
-</nav>
 
-<header class="hero">
-<div class="hero-inner">
-<div class="kicker">Official Artist Website</div>
-<h1>Brian Ansel Major</h1>
-<p>Independent songwriter and recording artist creating music from the places where real life, love, struggle and resilience meet.</p>
-<div class="buttons">
-<a class="btn primary" href="https://open.spotify.com/artist/2P1NVw72CWnujKtKR3ACbX" target="_blank" rel="noopener">Listen on Spotify</a>
-<a class="btn" href="https://youtu.be/wL5PXIMUkrM" target="_blank" rel="noopener">Watch on YouTube</a
+.footer-inner {
+    max-width: 
